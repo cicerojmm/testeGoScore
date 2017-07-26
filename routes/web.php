@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('template');
-});
+Route::get('/', 'MenuPrincipalController@mostraMenu');
