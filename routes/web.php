@@ -28,3 +28,6 @@ Route::get('/problema3/mostraIdade', 'CalculaAlturaController@calculaAltura');
 
 Route::get('/problema4', 'RepetePalavraController@mostraFormulario');
 Route::post('/problema4/mostraPalavra', 'RepetePalavraController@repetePalavra');
+
+Route::get('/problema5', 'SequenciaFibonacciController@mostraFormulario');
+Route::post('/problema5/mostraSequencia', 'SequenciaFibonacciController@recebeNumerosAleatorio');
