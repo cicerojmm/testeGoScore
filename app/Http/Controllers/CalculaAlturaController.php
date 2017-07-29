@@ -17,17 +17,30 @@ use Illuminate\Http\Request;
  */
 
 class CalculaAlturaController extends Controller {
+    /*
+     * Retorna pagina mostrando a altura
+     */
     public function mostraAltura() {
 
         return view('paginas/problema3/mostra_altura');
     }
 
+
+    /*
+     * Busca Todos os Dados do Banco de Dados
+     */
     private function todosBancoDados() {
         $dados = CalculaAltura::all();
 
         return $dados;
     }
 
+    /*
+     * Realiza o calculo da altura segundo os dados do banco de dados
+     * quanto tempo uma pessoa demora para ser maior que outra, conforme
+     * dado de crescimento em cm por ano
+     * Retorna a quantidade de anos que leva para isso ocorrer
+     */
     public function calculaAltura() {
         $qtdAnos = 0;
 
@@ -47,8 +60,7 @@ class CalculaAlturaController extends Controller {
            $qtdAnos++;
        }
 
-        return response()->json(['qtdAnos' => $qtdAnos]);
-
+       return response()->json(['qtdAnos' => $qtdAnos]);
 
     }
 }

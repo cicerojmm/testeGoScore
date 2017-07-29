@@ -16,10 +16,18 @@ use App\RepetePalavra;
 use Illuminate\Http\Request;
 
 class RepetePalavraController extends Controller {
+
+    /*
+     * retorna pagina inicial
+     */
     public function mostraFormulario() {
         return view('paginas/problema4/repete_palavras');
     }
 
+    /*
+     * Monta algoritmo para realizar o recebimento da palavra pelo formulario
+     * e retorna para a view o dado recebido em dorma de piramede, repetindo
+     */
     public function repetePalavra(Request $request) {
         $palavra = $request->all();
         $contatenacao = '';
@@ -41,7 +49,9 @@ class RepetePalavraController extends Controller {
 
     }
 
-
+    /*
+     * Cria matriz com através de uma string separa por ','
+     */
     public function criaMatriString($string) {
         $stringRetorno = explode(',', $string);
 
@@ -49,6 +59,9 @@ class RepetePalavraController extends Controller {
         return $stringRetorno;
     }
 
+    /*
+     * Salva dados no banco de dados
+     */
     private function salvaBancoDados($palavra, $stringFinal) {
         $params = ['palavra_original' => $palavra, 'palavra_repetida' => $stringFinal];
 

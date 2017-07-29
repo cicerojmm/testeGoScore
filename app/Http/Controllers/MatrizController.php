@@ -17,7 +17,10 @@ Use DB;
  */
 
 class MatrizController extends Controller {
-
+    /*
+     * Monta o algoritmo para criar a matriz e retornar
+     * os dados para a pagina que mostra os dados
+     */
     public function mostraMatriz() {
         if($this->verificaBancoDados()) {
             $this->criaMatriz();
@@ -31,7 +34,9 @@ class MatrizController extends Controller {
                 with(['matriz'=> $matriz, 'matrizPar' => $matrizPar, 'matrizImpar' => $matrizImpar]);
     }
 
-
+    /*
+     * Verifica se tem dados no banco de dados
+     */
     private function verificaBancoDados() {
         $estaVazio = false;
         $dados = Matriz::all();
@@ -44,6 +49,9 @@ class MatrizController extends Controller {
         return $estaVazio;
     }
 
+    /*
+     * Realiza a criação da matriz com numeros inteiros aleatorios
+     */
     private function criaMatriz() {
         for($i=0; $i < 5; $i++) {
             for($j=0; $j < 5; $j++) {
@@ -58,6 +66,9 @@ class MatrizController extends Controller {
         }
     }
 
+    /*
+     * faz a recuperação da matriz cadastrada no banco de dados
+     */
     private function recuperaMatriz() {
         $dados = Matriz::all();
         $matriz = array();
@@ -70,7 +81,9 @@ class MatrizController extends Controller {
         return $matriz;
     }
 
-
+    /*
+     * Realiza a recuperação da matriz e sepera apenas números pares
+     */
     private function recuperaMatrizPar() {
         $dados = Matriz::all();
         $matrizPar = array();
@@ -85,6 +98,9 @@ class MatrizController extends Controller {
         return $matrizPar;
     }
 
+    /*
+     * Realiza a recuperação da matriz e sepera apenas números impares
+     */
     private function recuperaMatrizImpar() {
         $dados = Matriz::all();
         $matrizImpar = array();

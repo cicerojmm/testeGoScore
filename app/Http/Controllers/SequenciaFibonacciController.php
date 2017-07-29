@@ -13,10 +13,17 @@ use Illuminate\Http\Request;
  */
 
 class SequenciaFibonacciController extends Controller {
+    /*
+     * retorna pagina inicial
+     */
     public function mostraFormulario() {
         return view('paginas/problema5/mostra_sequencia_fibonacci');
     }
 
+    /*
+     * Recebe um sequencia de numeros aleatorios e monta algoritmo
+     * para retorna numeros em uma sequencia Fibonacci
+     */
     public function recebeNumerosAleatorio(Request $request) {
         $numeros = $request->all();
 
@@ -32,10 +39,11 @@ class SequenciaFibonacciController extends Controller {
         return response()->json(['numeroSequencia' => $stringFibonacci]);
     }
 
-
+    /*
+     * Realiza a criação da sequencia Fibonacci conforme a regra
+     * dos numeros desta sequencia
+     */
     public function validaSequenciaFibonacci($numeros) {
-
-
         $matrizFibonacci = array();
         $i = 0;
 
@@ -61,6 +69,10 @@ class SequenciaFibonacciController extends Controller {
         return $matrizFibonacci;
     }
 
+    /*
+     * Monta a string com a sequencia Fibonacci em Ordem
+     * para poder retornar e mostra os dados
+     */
     private function montaStringFibonacci($matrizFibonacci) {
         $stringFibonacci = '';
 
@@ -73,6 +85,9 @@ class SequenciaFibonacciController extends Controller {
         return $stringFibonacci;
     }
 
+    /*
+     * Salva dados no banco de dados
+     */
     private function salvaBancoDados($numeros, $stringFibonacci) {
         $params = ['numeros_sequencia_aleatoria' => $numeros, 'numeros_sequencia_fibonacci' => $stringFibonacci];
 

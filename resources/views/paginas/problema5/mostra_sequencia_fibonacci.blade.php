@@ -18,7 +18,7 @@
         {{ csrf_field() }}
 
         <div class="form-group">
-            <label class="col-md-3 col-sm-3 col-xs-12" for="numeros">Palavra<span class="required">*</span>
+            <label class="col-md-3 col-sm-3 col-xs-12" for="numeros">Números<span class="required">*</span>
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" maxlength="250" id="numeros" name="numeros" value="{{ old('numeros') }}" placeholder="Digite os números" class="form-control col-md-7 col-xs-12" required>
