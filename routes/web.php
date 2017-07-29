@@ -24,3 +24,7 @@ Route::get('/problema2', 'MatrizController@mostraMatriz');
 
 Route::get('/problema3', 'CalculaAlturaController@mostraAltura');
 Route::get('/problema3/mostraIdade', 'CalculaAlturaController@calculaAltura');
+
+
+Route::get('/problema4', 'RepetePalavraController@mostraFormulario');
+Route::post('/problema4/mostraPalavra', 'RepetePalavraController@repetePalavra');
