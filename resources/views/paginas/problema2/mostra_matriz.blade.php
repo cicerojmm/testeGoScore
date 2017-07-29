@@ -2,7 +2,7 @@
 
 
 @section('titulo_secao')
-    Problema 1
+    Problema 2
 @stop
 
 @section('conteudo')

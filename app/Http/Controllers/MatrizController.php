@@ -6,7 +6,15 @@ use App\Matriz;
 use Illuminate\Http\Request;
 Use DB;
 
-
+/**
+ * Created by PhpStorm.
+ * User: ciceromoura
+ * Date: 29/07/17
+ * Time: 11:41
+ *
+ * Constroi uma matriz 5x5 e imprime os valores de toda a matriz,
+ * apenas o pares e apenas os impares.
+ */
 
 class MatrizController extends Controller {
 

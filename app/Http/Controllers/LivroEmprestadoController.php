@@ -7,6 +7,15 @@ use DateInterval;
 use DateTime;
 use Illuminate\Http\Request;
 
+/**
+ * Created by PhpStorm.
+ * User: ciceromoura
+ * Date: 28/07/17
+ * Time: 20:41
+ *
+ * Salva e calcula o tempo de emprestimo de uma livro para aluno
+ * ou professor
+ */
 
 class LivroEmprestadoController extends Controller {
 
