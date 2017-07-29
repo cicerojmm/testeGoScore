@@ -7,11 +7,21 @@
 
     <link rel="stylesheet" href="/css/app.css" type="text/css" />
     <script src="/js/app.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Jquery 3.1.1 -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>-->
+
+
+
+    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
 
     <link rel="stylesheet" href="/css/template.css" type="text/css" />
 
+    <script type="text/javascript" src="/js/pagina_problema1.js"></script>
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 

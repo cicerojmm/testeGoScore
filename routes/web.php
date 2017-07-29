@@ -12,3 +12,8 @@
 */
 
 Route::get('/', 'MenuPrincipalController@mostraMenu');
+Route::get('/problema1', 'LivroEmprestadoController@mostraFormulario');
+Route::get('/problema1/emprestimo/{id}',  'LivroEmprestadoController@mostraEmprestimo');
+
+Route::post('/problema1/salvaFormulario', 'LivroEmprestadoController@salvaFormulario');
+
